@@ -1,0 +1,8 @@
+pipeline:
+  publish:
+    image: plugins/docker
+    dockerfile: image/Dockerfile
+    username: lobaroci
+    repo: lobaro/dnsmasq-docker
+    tags: [ latest ]
+    secrets: [ docker_password ]
