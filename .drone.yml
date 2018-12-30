@@ -4,6 +4,7 @@ pipeline:
   publish:
     image: plugins/docker
     dockerfile: image/Dockerfile
+    context: image/
     username: lobaroci
     repo: lobaro/dnsmasq-docker
     tags: [ latest ]
