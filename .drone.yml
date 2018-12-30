@@ -1,3 +1,5 @@
+base: /image
+
 pipeline:
   publish:
     image: plugins/docker
