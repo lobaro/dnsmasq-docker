@@ -2,11 +2,11 @@ version: '3'
 
 services:
   dnsmasq:
-    image: dnsmasq-docker:latest
+    image: lobaro/dnsmasq-docker:latest
     volumes:
-      # Example to have a separate hosts_vpn file to resolve VPN hosts
+      # Example to have a separate vpn file to resolve VPN hosts
       - ./cfg/dnsmasq.d:/etc/dnsmasq.d
-      - ./cfg/hosts_vpn:/etc/hosts_vpn
+      - ./cfg/hosts.d:/etc/hosts.d
     ports:
       - 53:53/tcp
       - 53:53/udp
